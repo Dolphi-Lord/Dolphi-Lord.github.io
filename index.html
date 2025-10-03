@@ -7,68 +7,75 @@
   <title>AI Money Blog — Earn with AI</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
   <style>
     :root{
       --bg:#0f1724;
-      --card:#0f1724;
       --muted:#9aa4b2;
       --accent:#7c3aed;
-      --glass: rgba(255,255,255,0.04);
-      --glass-2: rgba(255,255,255,0.02);
       --max-width:1100px;
       color-scheme: dark;
       font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;background: linear-gradient(180deg,#071022 0%, #091627 60%);color:#e6eef8}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;margin:0;background: linear-gradient(180deg,#071022 0%, #091627 60%);color:#e6eef8;font-size:16px;}
     a{color:inherit;text-decoration:none}
-    .container{max-width:var(--max-width);margin:0 auto;padding:28px}
+    .container{max-width:var(--max-width);margin:0 auto;padding:20px}
 
     /* Header */
-    header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 0}
+    header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;padding:18px 0}
     .brand{display:flex;align-items:center;gap:12px}
     .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#4f46e5);display:flex;align-items:center;justify-content:center;font-weight:800;color:white;box-shadow:0 6px 20px rgba(124,58,237,0.18)}
     .site-title{font-weight:700;font-size:1.15rem}
     .tag{font-size:0.85rem;color:var(--muted)}
-    nav ul{display:flex;gap:18px;list-style:none;padding:0;margin:0;align-items:center}
+    nav ul{display:flex;flex-wrap:wrap;gap:18px;list-style:none}
     nav a.button{background:linear-gradient(90deg,var(--accent),#4f46e5);padding:10px 14px;border-radius:10px;font-weight:600}
 
     /* Hero */
-    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:36px 0}
-    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:28px;border-radius:16px;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
-    .hero h1{margin:0 0 10px;font-size:2rem;line-height:1.05}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:start;padding:36px 0}
+    .hero-card{background:rgba(255,255,255,0.02);padding:28px;border-radius:16px;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+    .hero h1{margin:0 0 10px;font-size:2rem;line-height:1.2}
     .hero p{margin:0 0 18px;color:var(--muted);font-size:1rem}
-    .cta-row{display:flex;gap:12px}
-    .input{background:var(--glass);border:1px solid rgba(255,255,255,0.03);padding:12px;border-radius:12px;min-width:0;color:inherit}
+    .cta-row{display:flex;flex-wrap:wrap;gap:12px}
+    .input{flex:1;min-width:200px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);padding:12px;border-radius:12px;color:inherit}
 
     /* Posts */
-    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:22px}
-    .post{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);display:flex;gap:14px}
-    .thumb{width:140px;height:100px;border-radius:8px;flex-shrink:0;overflow:hidden;background-size:cover;background-position:center}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:22px}
+    .post{background:rgba(255,255,255,0.02);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.05);display:flex;flex-direction:row;gap:14px}
+    .thumb{width:120px;height:100px;border-radius:8px;flex-shrink:0;overflow:hidden;background-size:cover;background-position:center}
     .meta{font-size:0.85rem;color:var(--muted);margin-bottom:8px}
     .post h3{margin:0 0 8px;font-size:1.05rem}
     .excerpt{color:var(--muted);font-size:0.95rem}
 
     /* Sidebar */
-    .sidebar{background:var(--glass-2);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .sidebar{background:rgba(255,255,255,0.03);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.05)}
     .widget{margin-bottom:18px}
-    .subscribe input{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit}
+    .subscribe input{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.05);background:transparent;color:inherit}
     .btn{display:inline-block;padding:10px 14px;border-radius:10px;font-weight:600;background:linear-gradient(90deg,var(--accent),#4f46e5);border:none;color:white;cursor:pointer}
 
     /* Article */
     article{line-height:1.6}
     h2{color:white}
     .tags{display:flex;gap:8px;flex-wrap:wrap}
-    .tag-chip{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;font-size:0.85rem}
+    .tag-chip{background:rgba(255,255,255,0.05);padding:6px 10px;border-radius:999px;font-size:0.85rem}
 
     /* Footer */
-    footer{padding:28px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,0.02);margin-top:28px}
+    footer{padding:28px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,0.05);margin-top:28px;text-align:center}
 
     /* Responsive */
-    @media (max-width:980px){
+    @media (max-width:1024px){
       .hero{grid-template-columns:1fr;}
-      .grid{grid-template-columns:1fr}
+    }
+    @media (max-width:768px){
+      header{flex-direction:column;align-items:flex-start}
+      .post{flex-direction:column}
+      .thumb{width:100%;height:180px}
+    }
+    @media (max-width:480px){
+      body{font-size:14px}
+      .hero h1{font-size:1.5rem}
+      .cta-row{flex-direction:column}
+      .input{width:100%}
     }
   </style>
 </head>
@@ -101,7 +108,7 @@
           <input class="input" placeholder="Search guides, e.g. 'chatbots for e‑commerce'">
           <button class="btn">Search</button>
         </div>
-        <div style="margin-top:18px;display:flex;gap:12px;align-items:center">
+        <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
           <div class="tag-chip">Beginner friendly</div>
           <div class="tag-chip">No-code</div>
           <div class="tag-chip">Case studies</div>
@@ -176,10 +183,10 @@
           </article>
         </div>
 
-        <section style="margin-top:22px;background:var(--glass);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)">
+        <section style="margin-top:22px;background:rgba(255,255,255,0.04);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.05)">
           <h2>Latest deep-dive: Build a Chatbot that generates $1,200/month</h2>
           <p style="color:var(--muted)">This walkthrough covers validation, cost estimates, example prompts, and a timeline you can reuse. Includes templates you can copy and adapt today.</p>
-          <div style="margin-top:12px;display:flex;gap:12px">
+          <div style="margin-top:12px;display:flex;gap:12px;flex-wrap:wrap">
             <button class="btn" onclick="openArticle()">Read full guide</button>
             <a href="#" style="align-self:center;color:var(--muted)">Browse case studies →</a>
           </div>
@@ -210,10 +217,8 @@
     </main>
 
     <footer>
-      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
-        <div>© <strong>AI Money Blog</strong> — Practical AI income guides</div>
-        <div style="color:var(--muted)">Made with ♥ — <a href="#">Privacy</a> • <a href="#">Terms</a></div>
-      </div>
+      <div>© <strong>AI Money Blog</strong> — Practical AI income guides</div>
+      <div style="margin-top:8px;color:var(--muted)">Made with ♥ — <a href="#">Privacy</a> • <a href="#">Terms</a></div>
     </footer>
   </div>
 
@@ -221,7 +226,6 @@
     function subscribe(){
       const email = document.getElementById('email').value;
       if(!email) return alert('Please enter your email');
-      // placeholder behavior — replace with real subscribe integration
       alert('Thanks! ' + email + ' — you\'re subscribed (demo).');
       document.getElementById('email').value='';
     }
