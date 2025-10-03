@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Blog: How to use AI to make money — guides, case studies, tools, and step-by-step tutorials.">
+  <title>AI Money Blog — Earn with AI</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0f1724;
+      --muted:#9aa4b2;
+      --accent:#7c3aed;
+      --glass: rgba(255,255,255,0.04);
+      --glass-2: rgba(255,255,255,0.02);
+      --max-width:1100px;
+      color-scheme: dark;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background: linear-gradient(180deg,#071022 0%, #091627 60%);color:#e6eef8}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max-width);margin:0 auto;padding:28px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#4f46e5);display:flex;align-items:center;justify-content:center;font-weight:800;color:white;box-shadow:0 6px 20px rgba(124,58,237,0.18)}
+    .site-title{font-weight:700;font-size:1.15rem}
+    .tag{font-size:0.85rem;color:var(--muted)}
+    nav ul{display:flex;gap:18px;list-style:none;padding:0;margin:0;align-items:center}
+    nav a.button{background:linear-gradient(90deg,var(--accent),#4f46e5);padding:10px 14px;border-radius:10px;font-weight:600}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:36px 0}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:28px;border-radius:16px;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+    .hero h1{margin:0 0 10px;font-size:2rem;line-height:1.05}
+    .hero p{margin:0 0 18px;color:var(--muted);font-size:1rem}
+    .cta-row{display:flex;gap:12px}
+    .input{background:var(--glass);border:1px solid rgba(255,255,255,0.03);padding:12px;border-radius:12px;min-width:0;color:inherit}
+
+    /* Posts */
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:22px}
+    .post{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);display:flex;gap:14px}
+    .thumb{width:140px;height:100px;border-radius:8px;flex-shrink:0;overflow:hidden;background-size:cover;background-position:center}
+    .meta{font-size:0.85rem;color:var(--muted);margin-bottom:8px}
+    .post h3{margin:0 0 8px;font-size:1.05rem}
+    .excerpt{color:var(--muted);font-size:0.95rem}
+
+    /* Sidebar */
+    .sidebar{background:var(--glass-2);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .widget{margin-bottom:18px}
+    .subscribe input{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;font-weight:600;background:linear-gradient(90deg,var(--accent),#4f46e5);border:none;color:white;cursor:pointer}
+
+    /* Article */
+    article{line-height:1.6}
+    h2{color:white}
+    .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag-chip{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;font-size:0.85rem}
+
+    /* Footer */
+    footer{padding:28px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,0.02);margin-top:28px}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">AI</div>
+        <div>
+          <div class="site-title">AI Money Blog</div>
+          <div class="tag">Practical AI guides • Tools • Case studies</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Guides</a></li>
+          <li><a href="#">Tools</a></li>
+          <li><a href="#">Case Studies</a></li>
+          <li><a class="button" href="#subscribe">Subscribe</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Turn AI into income: practical guides, real projects, and revenue-tested playbooks.</h1>
+        <p>Learn how to build AI-powered side hustles, automate freelance work, sell tools, and monetize models — step-by-step with templates and real numbers.</p>
+        <div class="cta-row">
+          <input class="input" placeholder="Search guides, e.g. 'chatbots for e‑commerce'">
+          <button class="btn">Search</button>
+        </div>
+        <div style="margin-top:18px;display:flex;gap:12px;align-items:center">
+          <div class="tag-chip">Beginner friendly</div>
+          <div class="tag-chip">No-code</div>
+          <div class="tag-chip">Case studies</div>
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <div class="widget">
+          <h3 style="margin:0 0 8px">Subscribe</h3>
+          <p style="margin:0 0 12px;color:var(--muted)">Get weekly AI income ideas and templates.</p>
+          <form id="subscribe" class="subscribe" onsubmit="event.preventDefault();subscribe();">
+            <input id="email" type="email" placeholder="you@domain.com" required>
+            <div style="margin-top:10px"><button class="btn" type="submit">Join</button></div>
+          </form>
+        </div>
+        <div class="widget">
+          <h4 style="margin:0 0 10px">Popular tools</h4>
+          <ul style="margin:0;padding:0;list-style:none;color:var(--muted);">
+            <li>• Prompt templates library</li>
+            <li>• Auto-content repurposer</li>
+            <li>• Chatbot for lead-gen</li>
+          </ul>
+        </div>
+        <div class="widget">
+          <h4 style="margin:0 0 10px">Follow</h4>
+          <div style="display:flex;gap:10px;align-items:center">
+            <a href="#" aria-label="twitter"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="#" aria-label="youtube"><i class="fab fa-youtube fa-lg"></i></a>
+            <a href="#" aria-label="linkedin"><i class="fab fa-linkedin fa-lg"></i></a>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <main style="display:grid;grid-template-columns:1fr 340px;gap:22px;align-items:start">
+      <div>
+        <div class="grid">
+          <article class="post">
+            <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1526378725277-3ef0a017c2d9?auto=format&fit=crop&w=800&q=60')"></div>
+            <div>
+              <div class="meta">March 10, 2025 • 8 min read</div>
+              <h3>Build a money-making chatbot for small businesses</h3>
+              <p class="excerpt">Step-by-step: choose a niche, collect prompts, integrate payments, and deploy a lead-converting bot that pays for itself.</p>
+            </div>
+          </article>
+
+          <article class="post">
+            <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1555375771-7db6951da88d?auto=format&fit=crop&w=800&q=60')"></div>
+            <div>
+              <div class="meta">Feb 21, 2025 • 6 min read</div>
+              <h3>Sell prompt packs that actually sell</h3>
+              <p class="excerpt">How to create, price, and market high-value prompt collections for copywriters, marketers, and developers.</p>
+            </div>
+          </article>
+
+          <article class="post">
+            <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1581091870622-3c7c1c2e3d8c?auto=format&fit=crop&w=800&q=60')"></div>
+            <div>
+              <div class="meta">Jan 9, 2025 • 10 min read</div>
+              <h3>Automate freelancing with AI workflows</h3>
+              <p class="excerpt">Tools and templates to automate bidding, client onboarding, and deliverables — scale from 1:1 to 1:many.</p>
+            </div>
+          </article>
+
+          <article class="post">
+            <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=60')"></div>
+            <div>
+              <div class="meta">Dec 2, 2024 • 7 min read</div>
+              <h3>Micro-SaaS ideas powered by automated agents</h3>
+              <p class="excerpt">Low-cost micro-SaaS templates you can launch in weeks using orchestration tools and LLMs.</p>
+            </div>
+          </article>
+        </div>
+
+        <section style="margin-top:22px;background:var(--glass);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)">
+          <h2>Latest deep-dive: Build a Chatbot that generates $1,200/month</h2>
+          <p style="color:var(--muted)">This walkthrough covers validation, cost estimates, example prompts, and a timeline you can reuse. Includes templates you can copy and adapt today.</p>
+          <div style="margin-top:12px;display:flex;gap:12px">
+            <button class="btn" onclick="openArticle()">Read full guide</button>
+            <a href="#" style="align-self:center;color:var(--muted)">Browse case studies →</a>
+          </div>
+        </section>
+      </div>
+
+      <aside>
+        <div class="sidebar">
+          <div class="widget">
+            <h4 style="margin:0 0 10px">About this blog</h4>
+            <p style="margin:0;color:var(--muted)">Actionable AI monetization guides from practitioners. No fluff — clear steps, numbers, and templates.</p>
+          </div>
+          <div class="widget">
+            <h4 style="margin:0 0 10px">Tags</h4>
+            <div class="tags">
+              <div class="tag-chip">chatbots</div>
+              <div class="tag-chip">prompts</div>
+              <div class="tag-chip">micro-saas</div>
+              <div class="tag-chip">automation</div>
+            </div>
+          </div>
+          <div class="widget">
+            <h4 style="margin:0 0 10px">Sponsor</h4>
+            <p style="margin:0;color:var(--muted)">Tools and courses that help you ship faster. Contact us for sponsored posts.</p>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+        <div>© <strong>AI Money Blog</strong> — Practical AI income guides</div>
+        <div style="color:var(--muted)">Made with ♥ — <a href="#">Privacy</a> • <a href="#">Terms</a></div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function subscribe(){
+      const email = document.getElementById('email').value;
+      if(!email) return alert('Please enter your email');
+      // placeholder behavior — replace with real subscribe integration
+      alert('Thanks! ' + email + ' — you\'re subscribed (demo).');
+      document.getElementById('email').value='';
+    }
+    function openArticle(){
+      alert('This demo opens an article. Replace with real navigation or modal.');
+    }
+  </script>
+</body>
+</html>
